@@ -4,7 +4,9 @@
 
 - Use LCD Keypad Shield with 6 buttons.
 - Show a part of a period table.
-- move the window with buttons.
+- Move the window with buttons.
+
+![](./images/_DSC6331.JPG)
 
 ## Ingrediants
 
@@ -27,14 +29,15 @@
 Tools -> Manage Library
 
 ### Check syntax
-"v"
+1. Use Arduino IDE. 
+2. Select tick mark "v".
 
 ### Upload program
-"->"
+1. Use Arduino IDE. 
+2. Select right arrow "->". 
 
 ### Select Device
 - Tools -> Ports -> (Select that looks likely)
-
 
 ### Code
 '''
