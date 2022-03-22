@@ -13,7 +13,7 @@ The keypad works with voltage splitting.
 To see the log, one has to turn on 'serial output' ('magnifying glass at the 
 upper-right corner of the Arduino IDE.)
 
-- Library needed: '''LiquidCrystal.h'''
+- Library needed: ```LiquidCrystal.h```
 - Need to understand string array
 
 
@@ -63,7 +63,7 @@ Tools -> Manage Library
 
 ------------------------------------------
 ### Code
-'''
+```
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(8, 9, 4, 5, 6, 7);
 const int NX = 64;
@@ -181,7 +181,7 @@ void loop()
   delay(200);
 }
 
-'''
+```
 
 ------------------------------------------
 
