@@ -17,7 +17,7 @@ upper-right corner of the Arduino IDE.)
 - Need to understand string array
 
 
-![](./images/_DSC6331.JPG)
+![](./images/arduino_ide.png)
 
 ## To do 
 - error handling when '-1'st line of the periodic table is called.
