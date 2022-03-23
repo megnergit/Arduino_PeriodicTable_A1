@@ -23,13 +23,13 @@ upper-right corner of the Arduino IDE.)
 - error handling when '-1'st line of the periodic table is called.
 - fast feed with left and right most buttons.
 
-## Ingrediants
+## Component
 
 - LCD 1602 Display Keypad Shield HD44780
 - Arduino Uno (ATmega328)
 - Cable (USB A to USB B)
 - micro USB -> TypeC converter cable (for my laptop)
-- Macbook Pro
+- MacBook Pro
 - Power unit (USB Battery)
 
 ------------------------------------------
