@@ -7,7 +7,7 @@ char pt[NY][NX] = {
     {"LiBe                    B C N O F Ne"},
     {"NaMg                    AlSiP S ClAr"},
     {"K CaScTiV CrMnFeCoNiCuZnGaGeAsSeBrKr"},
-    {"RbSrY ZrNbMoTcRuRhPdAgCdInSnAbTeI Xe"},
+    {"RbSrY ZrNbMoTcRuRhPdAgCdInSnSbTeI Xe"},
     {"CsBa  HfTaWReOsIrPtAuHgTlPbBiPoAtRn "},
     {"FrRa  RfDbSgBhHsMtDsRgCnNhFlMcLvTsOg"},
     {"                                    "},
@@ -30,8 +30,8 @@ void renew(int x, int y)
   String p0 = pt[y];
   String p1 = pt[y + 1];
 
-  Serial.println(x);
-  Serial.println(xp);
+//  Serial.println(x);
+//  Serial.println(xp);
 
   lcd.clear();
 
@@ -39,14 +39,14 @@ void renew(int x, int y)
   if (x < 0)
   {
     xp = 0;
-    Serial.println("substring: ");
+//    Serial.println("substring: ");
     p0 = p0.substring(-x, NX);
     p1 = p1.substring(-x, NX);
   };
 
   //    Serial.println("\n");
-  Serial.println(p0);
-  Serial.println(p1);
+//  Serial.println(p0);
+//  Serial.println(p1);
 
   lcd.setCursor(xp, 0);
   lcd.print(p0);
@@ -70,6 +70,9 @@ void loop()
   //  int x, y;
   int ADCdata = analogRead(A0);
 
+//  Serial.print(ADCdata);
+//  Serial.print("\n");
+
   if (x < -NX)
   {
     x = -NX;
@@ -89,26 +92,36 @@ void loop()
 
   lcd.setCursor(x, y);
 
-  if (ADCdata < 50)
+  if (ADCdata < 60)
   { // right
-    x = x + 1;
+    x = x - 1;
     renew(x, y);
   }
-  else if (ADCdata < 150)
+  else if (ADCdata < 200)
   { // up
     y = y - 1;
     renew(x, y);
   }
-  else if (ADCdata < 350)
+  else if (ADCdata < 400)
   { // down
     y = y + 1;
     renew(x, y);
   }
-  else if (ADCdata < 500)
+  else if (ADCdata < 600)
   { // left
-    x = x - 1;
+    x = x + 1;
     renew(x, y);
   }
+  else if (ADCdata < 800)
+  { // ganz left
+    x = x + 3;
+    renew(x, y);
+  }
+/*  else if (ADCdata < 1024)
+  { // ganz right
+    x = x - 3 ;
+    renew(x, y);
+  } */
   else
   {
   }
